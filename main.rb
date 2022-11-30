@@ -1,4 +1,4 @@
-#  rubocop:disable all
+
 require './classes/author'
 require './classes/item_module'
 require './classes/store'
