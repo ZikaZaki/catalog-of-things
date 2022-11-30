@@ -1,4 +1,3 @@
-
 require './classes/author'
 require './classes/item_module'
 require './classes/store'
@@ -10,14 +9,15 @@ class App
 
   def initialize
     @games = []
-    @authors = [Author.new('Loltolo', 'Lesapiti'), Author.new('Lerisen', 'Taasio'), Author.new('Joseph', 'Ouko'), Author.new('Stephen', 'King')]
+    @authors = [Author.new('Loltolo', 'Lesapiti'), Author.new('Lerisen', 'Taasio'), Author.new('Joseph', 'Ouko'),
+                Author.new('Stephen', 'King')]
     @choice_list = {
       '1' => 'List of games.',
       '2' => 'List all authors (e.g. Stephen King).',
       '3' => 'Add a game.',
       '4' => 'Exit',
-      
-    }  
+
+    }
   end
 
   def run
@@ -57,7 +57,6 @@ class App
     puts "\n Your data is saved"
   end
 end
-
 
 app = App.new
 app.run

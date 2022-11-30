@@ -6,7 +6,7 @@ module Store
     @games_collection = []
     @games.each do |game|
       @games_collection.push('Last_played_at' => game.last_played_at, 'Multiplayer' => game.multiplayer,
-                      'Publish_date' => game.publish_date)
+                             'Publish_date' => game.publish_date)
     end
     File.write('game.json', JSON.pretty_generate(@games_collection))
   end
