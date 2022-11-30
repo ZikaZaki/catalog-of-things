@@ -6,7 +6,7 @@ module ItemModule
   end
 
   def validate_date(date)
-    if is_validate?(date)
+    if validate?(date)
       date
     else
       print 'Add a valid date format [yyyy-mm-dd] : '
@@ -35,7 +35,7 @@ module ItemModule
     puts 'Game added Successfully'
   end
 
-  def is_validate?(date)
+  def validate?(date)
     Date.iso8601(date.to_s)
     true
   rescue ArgumentError
@@ -65,10 +65,10 @@ module ItemModule
   def list_games
     puts "\n List of Games : "
     puts "\n There are no games now." if @games.empty?
-    @games.each { |game|
+    @games.each do |game|
       puts "Date Last Played: #{game.last_played_at} Date Published: \
           #{game.publish_date} Is it a multiplayer: #{game.multiplayer}"
-    }
+    end
   end
 
   def list_author

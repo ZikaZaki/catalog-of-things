@@ -15,7 +15,7 @@ class App
       '1' => 'List of games.',
       '2' => 'List all authors (e.g. Stephen King).',
       '3' => 'Add a game.',
-      '4' => 'Exit',
+      '4' => 'Exit'
 
     }
   end
@@ -30,13 +30,11 @@ class App
       end
       print "\nYour option ==> "
       option = gets.chomp
-      if option == '4'
-        exit
-        break
-      end
+      break if option == '4'
 
       handle_option(option)
     end
+    exit
   end
 
   def handle_option(option)
