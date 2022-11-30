@@ -2,7 +2,7 @@ require_relative '../classes/item'
 
 describe Item do
   before :each do
-    @item = Item.new('2010-01-01', false)
+    @item = Item.new('2010-01-01')
   end
 
   it 'item date should be 2010-01-01' do
