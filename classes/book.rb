@@ -1,18 +1,18 @@
 require './classes/item.rb'
 
 class Book < Item
-    attr_accessor :publish_date, :publisher, :cover_state
+  attr_accessor :publish_date, :publisher, :cover_state
 
-    def initialize(publisher, cover_state)
-        super(publish_date, false)
+  def initialize(publisher, cover_state)
+    super(publish_date, false)
 
-        @publisher = publisher
-        @cover_state = cover_state
-    end
+    @publisher = publisher
+    @cover_state = cover_state
+  end
 
-    def can_be_archived?
-      super || @cover_state == "bad"
-    end
+  def can_be_archived?
+    super || @cover_state == "bad"
+  end
 end
 
 book1 = Book.new("publisher1", "good")
