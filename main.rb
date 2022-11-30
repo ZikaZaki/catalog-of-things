@@ -1,7 +1,7 @@
 #  rubocop:disable all
-require './author'
-require './item_module'
-require './store'
+require './classes/author'
+require './classes/item_module'
+require './classes/store'
 require 'json'
 
 class App
@@ -10,7 +10,7 @@ class App
 
   def initialize
     @games = []
-    @authors = [Author.new('Kang', 'Adventure'), Author.new('Luis', 'Action'), Author.new('Melissa', 'Horror'), Author.new('Mo', 'Sport')]
+    @authors = [Author.new('Loltolo', 'Lesapiti'), Author.new('Lerisen', 'Taasio'), Author.new('Joseph', 'Ouko'), Author.new('Stephen', 'King')]
     @choice_list = {
       '1' => 'List of games.',
       '2' => 'List all authors (e.g. Stephen King).',
@@ -22,8 +22,6 @@ class App
 
   def run
     parse_data
-    puts "Welcome to the Catalog of your Things 🗂️ \n"
-
     loop do
       puts "\nPlease choose your option by entering a number 😊 :"
       puts "\n"

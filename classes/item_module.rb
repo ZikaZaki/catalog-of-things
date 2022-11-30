@@ -1,4 +1,4 @@
-require './game'
+require_relative './game'
 require 'date'
 module ItemModule
   def initialize

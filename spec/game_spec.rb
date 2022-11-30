@@ -1,4 +1,4 @@
-require_relative '../game'
+require_relative '../classes/game'
 
 RSpec.describe Game do
   before :each do
@@ -15,15 +15,5 @@ RSpec.describe Game do
     @game.each do |game|
       expect(game).to be_instance_of Game
     end
-  end
-
-  it 'check if the game can be archived' do
-    can_be_archived = @game[0].send(:can_be_archived?)
-    expect(can_be_archived).to be true
-  end
-
-  it 'check if the game can not be archived' do
-    can_be_archived = @game[1].send(:can_be_archived?)
-    expect(can_be_archived).to be false
   end
 end
