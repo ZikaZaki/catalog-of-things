@@ -30,12 +30,12 @@ module ItemModule
 
     game = Game.new(last_played_at, publish_date, multiplayer)
     puts ' Author details \n'
-    print' Enter first_name ::'
-    first_name=gets.chomp.to_s
+    print ' Enter first_name ::'
+    first_name = gets.chomp.to_s
 
     print ' Enter second_name  ::'
-    second_name=gets.chomp.to_s
-    author=Author.new(first_name,second_name)
+    second_name = gets.chomp.to_s
+    author = Author.new(first_name, second_name)
     author.add_item(game)
     @authors.push(author)
     @games.push(game)

@@ -46,23 +46,23 @@ class App
   def handle_option(option)
     case option
     when '1'
-        puts "Loading ..."
+      puts "Loading ..."
     when '2'
-        puts "Loading ..."
+      puts "Loading ..."
     when '3'
-        puts "Loading ..."
+      puts "Loading ..."
     when '4'
-        puts "Loading ..."
+      puts "Loading ..."
     when '5'
-        puts "Loading ..."
+      puts "Loading ..."
     when '6'
-        puts "Loading ..."
+      puts "Loading ..."
     when '7'
-        add_game
+      add_game
     when '8'
-        list_games
+      list_games
     when '9'
-        list_author
+      list_author
     else
       puts 'Invalid option ❌ please choose again'
     end
