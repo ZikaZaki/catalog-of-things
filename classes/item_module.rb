@@ -63,8 +63,8 @@ module ItemModule
   end
 
   def list_games
-    puts "\n List of Games : "
-    puts "\n There are no games now." if @games.empty?
+    puts '\n List of Games : '
+    puts '\n There are no games now.' if @games.empty?
     @games.each do |game|
       puts "Date Last Played: #{game.last_played_at}\
       Date Published:#{game.publish_date}\

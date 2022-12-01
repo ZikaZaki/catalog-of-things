@@ -29,12 +29,12 @@ class App
     parse_game_data
     parse_author_data
     loop do
-      puts "\nPlease choose your option by entering a number 😊 :"
-      puts "\n"
-      @choice_list.each do |key, value|
+      puts '\nPlease choose your option by entering a number 😊 :'
+      puts '\n'
+      @choice_list.each do |_key, _value|
         puts "#{key} - #{value}"
       end
-      print "\nYour option ==> "
+      print '\nYour option ==> '
       option = gets.chomp
       break if option == '10'
 
@@ -45,18 +45,18 @@ class App
 
   def handle_option(option)
     case option
-    when '1'
-      puts "Loading ..."
-    when '2'
-      puts "Loading ..."
-    when '3'
-      puts "Loading ..."
-    when '4'
-      puts "Loading ..."
-    when '5'
-      puts "Loading ..."
-    when '6'
-      puts "Loading ..."
+    # when '1'
+    #   puts 'Loading ...'
+    # when '2'
+    #   puts 'Loading ...'
+    # when '3'
+    #   puts 'Loading ...'
+    # when '4'
+    #   puts 'Loading ...'
+    # when '5'
+    #   puts 'Loading ...'
+    # when '6'
+    #   puts 'Loading ...'
     when '7'
       add_game
     when '8'
@@ -71,6 +71,6 @@ class App
   def exit
     save_game_data
     save_author_data
-    puts "\n Your data is saved"
+    puts '\n Your data is saved'
   end
 end
