@@ -17,14 +17,13 @@ class App
       '1' => 'List all books.',
       '2' => 'List all labels (e.g. Gift, New)',
       '3' => 'Add a book',
-      '4' => 'List all music Albums',
+      '4' => 'Add a label',
       '5' => 'List all genres (e.g Comedy, Thriller)',
       '6' => 'Add a music album',
       '7' => 'Add a game.',
       '8' => 'List of games.',
       '9' => 'List all authors (e.g. Stephen King).',
-      '10' => 'Add a Label',
-      '11' => 'Exit'
+      '10' => 'Exit'
 
     }
   end
@@ -55,8 +54,8 @@ class App
       list_label
     when '3'
       add_book
-    # when '4'
-    # 'puts Loading...'
+     when '4'
+      add_label
     # when '5'
     #   puts 'Loading ...'
     # when '6'
@@ -67,8 +66,8 @@ class App
       list_games
     when '9'
       list_author
-    when '10'
-      add_label
+    #when '10'
+      #add_label
     else
       puts 'Invalid option ❌ please choose again'
     end

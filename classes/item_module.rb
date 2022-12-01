@@ -20,6 +20,7 @@ module ItemModule
     publish_date = gets.chomp
     book = Book.new(publisher, cover_state, publish_date)
     @books << book
+    add_label(book)
     puts 'Book added successfully!'
   end
 
@@ -35,19 +36,18 @@ module ItemModule
   end
 
   def add_label 
-    puts 'Please enter the label of the book:'
-    label = gets.chomp
+    puts 'Please enter the label Title of the book:'
+    title = gets.chomp
     puts 'Please enter the color of the label:'
     color = gets.chomp
-    label = Label.new(label, color)
-    @labels << label
-    label.add_item(books)
+    @labels << Label.new(title, color)
     puts 'Label added successfully!'
   end
 
   def list_label
     @labels.each do |label|
-      puts "Label: #{label.title} - Color: #{label.color}"
+      puts "Title: #{label.title} - Color: #{label.color}"
+      puts '-----------------'
     end
   end
 
