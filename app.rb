@@ -31,6 +31,8 @@ class App
   def run
     parse_game_data
     parse_author_data
+    parse_book_data
+    parse_label_data
     loop do
       puts '\nPlease choose your option by entering a number 😊 :'
       puts '\n'
@@ -76,6 +78,9 @@ class App
   def exit
     save_game_data
     save_author_data
+    save_book_data
+    save_label_data
+
     puts '\n Your data is saved'
   end
 end

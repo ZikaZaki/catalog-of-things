@@ -20,7 +20,6 @@ module ItemModule
     publish_date = gets.chomp
     book = Book.new(publisher, cover_state, publish_date)
     @books << book
-    add_label(book)
     puts 'Book added successfully!'
   end
 
