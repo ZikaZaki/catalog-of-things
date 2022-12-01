@@ -20,17 +20,24 @@ module ItemModule
     user_input = gets.chomp
     last_played_at = validate_date(user_input)
 
-    print 'Is this game a multiplayer? [Y/N]: '
-    user_input_second = gets.chomp.downcase
-    multiplayer = multiplayer?(user_input_second)
-
     print 'Enter publish date (yyyy-mm-dd): '
     user_input3 = gets.chomp
     publish_date = validate_date(user_input3)
 
-    game = Game.new(publish_date, last_played_at, multiplayer)
-    author = game_author
+    print 'Is this game a multiplayer? [Y/N] ::'
+    user_input_second = gets.chomp.downcase
+    multiplayer = multiplayer?(user_input_second)
+
+    game = Game.new(last_played_at, publish_date, multiplayer)
+    puts ' Author details \n'
+    print' Enter first_name ::'
+    first_name=gets.chomp.to_s
+
+    print ' Enter second_name  ::'
+    second_name=gets.chomp.to_s
+    author=Author.new(first_name,second_name)
     author.add_item(game)
+    @authors.push(author)
     @games.push(game)
     puts 'Game added Successfully'
   end
@@ -40,13 +47,6 @@ module ItemModule
     true
   rescue ArgumentError
     false
-  end
-
-  def game_author
-    list_author
-    print "\n Select author using number: "
-    author_index = gets.chomp.to_i
-    @authors[author_index]
   end
 
   def multiplayer?(answer)
@@ -66,8 +66,9 @@ module ItemModule
     puts "\n List of Games : "
     puts "\n There are no games now." if @games.empty?
     @games.each do |game|
-      puts "Date Last Played: #{game.last_played_at} Date Published: \
-          #{game.publish_date} Is it a multiplayer: #{game.multiplayer}"
+      puts "Date Last Played: #{game.last_played_at}\
+      Date Published:#{game.publish_date}\
+      Is it a multiplayer: #{game.multiplayer}"
     end
   end
 
