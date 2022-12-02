@@ -1,8 +1,14 @@
 [
   {
     "type": "MusicAlbum",
-    "id": 902,
+    "id": 605,
     "publish_date": "2022-12-02",
     "on_spotify": true
+  },
+  {
+    "type": "MusicAlbum",
+    "id": 282,
+    "publish_date": "2023-12-02",
+    "on_spotify": false
   }
 ]

@@ -1,67 +1,6 @@
 require './app/helpers/app_menu'
 
 module DataOperations
-  def self.list_all_books(books)
-    if books.any?
-      books.each do |book|
-        puts "id: #{book.id}, publisher: #{book.publisher}, publish_date: #{book.publish_date}"
-      end
-    else
-      AppMenu.error_msg('There are no books in the library!')
-    end
-  end
-
-  def self.list_all_music_albums(albums)
-    if albums.any?
-      albums.each do |album|
-        puts "id: #{album.id}, publish_date: #{album.publish_date}, on_spotify: #{album.on_spotify}"
-      end
-    else
-      AppMenu.error_msg('There are no music-albums!')
-    end
-  end
-
-  def self.list_all_games(games)
-    if games.any?
-      games.each do |game|
-        puts "id: #{game.id}, publish_date: #{game.publish_date},\n
-        last_played_at: #{game.last_played_at}, multiplayer: #{game.multiplayer}"
-      end
-    else
-      AppMenu.error_msg('There are no games!')
-    end
-  end
-
-  def self.list_all_genres(genres)
-    if genres.any?
-      genres.each do |genre|
-        puts "id: #{genre.id}, name: #{genre.name}"
-      end
-    else
-      AppMenu.error_msg('There are no genres!')
-    end
-  end
-
-  def self.list_all_labels(labels)
-    if labels.any?
-      labels.each do |label|
-        puts "id: #{label.id}, title: #{label.title}, color: #{label.color}"
-      end
-    else
-      AppMenu.error_msg('There are no labels!')
-    end
-  end
-
-  def self.list_all_authors(authors)
-    if authors.any?
-      authors.each do |author|
-        puts "id: #{author.id}, first_name: #{author.first_name}, last_name: #{author.last_name}"
-      end
-    else
-      AppMenu.error_msg('There are no authors!')
-    end
-  end
-
   def self.add_label
     puts 'Enter the label title of the book:'
     title = gets.chomp
@@ -96,7 +35,7 @@ module DataOperations
     puts 'Enter the publish date of the music-album in (yyyy-mm-dd) format:'
     publish_date = gets.chomp.to_s
     puts 'Is the music-album on spotify? (y/n)'
-    on_spotify = gets.chomp.to_s.downcase == 'y' ? true : false
+    on_spotify = gets.chomp.to_s.downcase == 'y'
     album = MusicAlbum.new(publish_date: publish_date, on_spotify: on_spotify)
     add_genre.add_item(album)
     AppMenu.success_msg('Music-Album was added successfully!')
@@ -119,7 +58,7 @@ module DataOperations
     puts 'Enter the last played date of the game in (yyyy-mm-dd) format:'
     last_played_at = gets.chomp.to_s
     puts 'Is the game multiplayer? (y/n)'
-    multiplayer = gets.chomp.to_s.downcase == 'y' ? true : false
+    multiplayer = gets.chomp.to_s.downcase == 'y'
     game = Game.new(publish_date: publish_date, last_played_at: last_played_at, multiplayer: multiplayer)
     add_author.add_item(game)
     AppMenu.success_msg('Game was added successfully!')

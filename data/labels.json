@@ -6,13 +6,13 @@
     "items": [
       {
         "type": "MusicAlbum",
-        "id": 961,
+        "id": 130,
         "publish_date": "2020-01-01",
         "on_spotify": true
       },
       {
         "type": "Movie",
-        "id": 582,
+        "id": 530,
         "publish_date": "2020-01-01",
         "silent": true
       }
@@ -25,10 +25,24 @@
     "items": [
       {
         "type": "Book",
-        "id": 775,
+        "id": 186,
         "publish_date": "2022-12-02",
         "publisher": "Zack & Petro",
         "cover_state": "new"
+      }
+    ]
+  },
+  {
+    "id": 582,
+    "title": "The Final Words",
+    "color": "Red",
+    "items": [
+      {
+        "type": "Book",
+        "id": 644,
+        "publish_date": "2023-12-02",
+        "publisher": "Petro & Zack",
+        "cover_state": "good"
       }
     ]
   }

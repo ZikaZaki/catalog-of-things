@@ -1,16 +1,30 @@
 [
   {
     "type": "Game",
-    "id": 90,
+    "id": 553,
     "publish_date": "2020-01-01",
     "last_played_at": "2019-01-01",
     "multiplayer": true
   },
   {
     "type": "Game",
-    "id": 822,
+    "id": 429,
     "publish_date": "2023-01-01",
     "last_played_at": "2022-12-02",
+    "multiplayer": true
+  },
+  {
+    "type": "Game",
+    "id": 15,
+    "publish_date": "2023-12-02",
+    "last_played_at": "2019-12-02",
+    "multiplayer": false
+  },
+  {
+    "type": "Game",
+    "id": 158,
+    "publish_date": "2024-12-02",
+    "last_played_at": "2019-02-02",
     "multiplayer": true
   }
 ]

@@ -5,9 +5,21 @@
     "items": [
       {
         "type": "MusicAlbum",
-        "id": 426,
+        "id": 333,
         "publish_date": "2022-12-02",
         "on_spotify": true
+      }
+    ]
+  },
+  {
+    "id": 654,
+    "name": "Pop",
+    "items": [
+      {
+        "type": "MusicAlbum",
+        "id": 282,
+        "publish_date": "2023-12-02",
+        "on_spotify": false
       }
     ]
   }
