@@ -8,7 +8,7 @@ module Store
   def save_book_data 
     @books_collection = []
     @books.each do |book|
-      @books_collection.push('publisher' => book.publisher, 'cover_state' => book.cover_state, 'publish_date' => book.publish_date, 'label' => book.label)
+      @books_collection.push('publisher' => book.publisher, 'cover_state' => book.cover_state, 'publish_date' => book.publish_date)
     end
     File.write('books.json', JSON.pretty_generate(@books_collection))
   end
