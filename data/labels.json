@@ -6,13 +6,13 @@
     "items": [
       {
         "type": "MusicAlbum",
-        "id": 130,
+        "id": 462,
         "publish_date": "2020-01-01",
         "on_spotify": true
       },
       {
         "type": "Movie",
-        "id": 530,
+        "id": 610,
         "publish_date": "2020-01-01",
         "silent": true
       }
@@ -25,7 +25,7 @@
     "items": [
       {
         "type": "Book",
-        "id": 186,
+        "id": 208,
         "publish_date": "2022-12-02",
         "publisher": "Zack & Petro",
         "cover_state": "new"
@@ -39,10 +39,24 @@
     "items": [
       {
         "type": "Book",
-        "id": 644,
+        "id": 407,
         "publish_date": "2023-12-02",
         "publisher": "Petro & Zack",
         "cover_state": "good"
+      }
+    ]
+  },
+  {
+    "id": 615,
+    "title": "Fiction",
+    "color": "Green",
+    "items": [
+      {
+        "type": "Book",
+        "id": 846,
+        "publish_date": "2022-02-02",
+        "publisher": "Pearson",
+        "cover_state": "new"
       }
     ]
   }

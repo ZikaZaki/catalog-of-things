@@ -1,16 +1,23 @@
 [
   {
     "type": "Book",
-    "id": 481,
+    "id": 644,
     "publish_date": "2022-12-02",
     "publisher": "Zack & Petro",
     "cover_state": "new"
   },
   {
     "type": "Book",
-    "id": 644,
+    "id": 865,
     "publish_date": "2023-12-02",
     "publisher": "Petro & Zack",
     "cover_state": "good"
+  },
+  {
+    "type": "Book",
+    "id": 846,
+    "publish_date": "2022-02-02",
+    "publisher": "Pearson",
+    "cover_state": "new"
   }
 ]

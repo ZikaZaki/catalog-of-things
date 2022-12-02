@@ -80,16 +80,17 @@ After you're finished please remove all the comments and instructions!
 > Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
-  <summary>Client</summary>
+  <summary>Languages</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://ruby-lang.org/">Ruby</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>Libs</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://github.com/fazibear/colorize">Colorize</a></li>
+    <li><a href="https://pry.github.io/">Pry</a></li>
   </ul>
 </details>
 
@@ -106,9 +107,10 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Keep-books-records]**
+- **[Keep-albums-records]**
+- **[Keep-movies-records]**
+- **[Keep-games-records]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,9 +118,9 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> Here's the link to the video demo of our project:
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Video Demo Link](https://drive.google.com/file/d/1pjby43JGO51mrWBhq5P0mn7ny9IItx_2/view?usp=sharing)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,63 +136,63 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-<!--
+
 Example command:
 
 ```sh
- gem install rails
+ bundle install
 ```
- -->
+
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
+
 Example commands:
 
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone https://github.com/ZikaZaki/catalog-of-things.git
 ```
---->
+-
 
 ### Install
 
 Install this project with:
 
-<!--
+
 Example command:
 
 ```sh
-  cd my-project
-  gem install
+  cd catalog-of-things
+  bundle install
 ```
---->
+-
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
+
 Example command:
 
 ```sh
-  rails server
+  ruby lib/main.rb
 ```
---->
+-
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
+
 Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec spec
 ```
---->
+-
 
 ### Deployment
 
@@ -218,17 +220,16 @@ Example:
 - Twitter: [Zakariya Al-Khamisi](https://twitter.com/ZakariyaKhamisi)
 - LinkedIn: [Zakariya Al-Khamisi](https://www.linkedin.com/in/zakariyaalkhamisisap/)
 
-👤 **Author2**
+👤 **Petro Loltolo Lesapiti**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@petrolesapiti](https://github.com/Loltolo-Lesapiti)
+- LinkedIn: [@petrolesapiti](https://www.linkedin.com/in/petrolesapitiloltolo/)
 
-👤 **Author3**
+👤 **Sharon Kessio**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@kessio](https://github.com/kessio)
+- Twitter: [@kessio_sharon](https://twitter.com/kessio_sharon)
+- LinkedIn: [sharon-kessio](https://www.linkedin.com/in/sharon-kessio-172220b5)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

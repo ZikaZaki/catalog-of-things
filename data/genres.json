@@ -5,7 +5,7 @@
     "items": [
       {
         "type": "MusicAlbum",
-        "id": 333,
+        "id": 346,
         "publish_date": "2022-12-02",
         "on_spotify": true
       }
@@ -17,7 +17,7 @@
     "items": [
       {
         "type": "MusicAlbum",
-        "id": 282,
+        "id": 989,
         "publish_date": "2023-12-02",
         "on_spotify": false
       }
