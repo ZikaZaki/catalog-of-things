@@ -58,11 +58,11 @@ class App
     when '3'
       add_book
     when '4'
-    puts 'Loading ...'
+      puts 'Loading1 ...'
     when '5'
-    puts 'Loading ...'
+      puts 'Loading2 ...'
     when '6'
-    puts 'Loading ...'
+      puts 'Loading3 ...'
     when '7'
       add_game
     when '8'
