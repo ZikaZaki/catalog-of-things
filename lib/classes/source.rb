@@ -1,4 +1,4 @@
-class Genre
+class Source
   attr_reader :id, :items
   attr_accessor :name
 

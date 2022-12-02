@@ -1,0 +1,14 @@
+[
+  {
+    "id": 17,
+    "name": "Coding",
+    "items": [
+      {
+        "type": "MusicAlbum",
+        "id": 426,
+        "publish_date": "2022-12-02",
+        "on_spotify": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+[
+  {
+    "id": 90,
+    "title": "Petro",
+    "color": "Red",
+    "items": [
+      {
+        "type": "MusicAlbum",
+        "id": 961,
+        "publish_date": "2020-01-01",
+        "on_spotify": true
+      },
+      {
+        "type": "Movie",
+        "id": 582,
+        "publish_date": "2020-01-01",
+        "silent": true
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "title": "The Gang of Two",
+    "color": "Orange",
+    "items": [
+      {
+        "type": "Book",
+        "id": 775,
+        "publish_date": "2022-12-02",
+        "publisher": "Zack & Petro",
+        "cover_state": "new"
+      }
+    ]
+  }
+]

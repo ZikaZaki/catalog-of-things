@@ -1,0 +1,36 @@
+[
+  {
+    "id": 582,
+    "first_name": "Petro",
+    "last_name": "Loltolo",
+    "items": [
+      {
+        "type": "Book",
+        "id": 753,
+        "publish_date": "2020-01-01",
+        "publisher": "Petro Loltolo",
+        "cover_state": "new"
+      },
+      {
+        "type": "Movie",
+        "id": 516,
+        "publish_date": "2020-01-01",
+        "silent": true
+      }
+    ]
+  },
+  {
+    "id": 937,
+    "first_name": "Petro",
+    "last_name": "Lotolololll",
+    "items": [
+      {
+        "type": "Game",
+        "id": 822,
+        "publish_date": "2023-01-01",
+        "last_played_at": "2022-12-02",
+        "multiplayer": true
+      }
+    ]
+  }
+]

@@ -4,10 +4,10 @@ class Item
   attr_reader :id, :genre, :author, :source, :label
   attr_accessor :publish_date, :archived
 
-  def initialize(publish_date)
-    @id = Random.rand(1...1000)
-    @publish_date = publish_date
-    @archived = false
+  def initialize(publish_date:, id: Random.rand(1...1000), archived: false)
+    @id = id
+    @publish_date = Date.strptime(publish_date, '%Y-%m-%d')
+    @archived = archived
   end
 
   def genre=(genre)
@@ -37,5 +37,17 @@ class Item
   def can_be_archived?
     archived_date = Date.iso8601(@publish_date).next_year(10)
     Date.today > archived_date
+  end
+
+  def to_json(*args)
+    {
+      'id' => @id,
+      'publish_date' => @publish_date,
+      'archived' => @archived,
+      'genre' => @genre,
+      'author' => @author,
+      'source' => @source,
+      'label' => @label
+    }.to_json(*args) # this method will auto_convert to json
   end
 end
