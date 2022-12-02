@@ -10,11 +10,14 @@ class App
   def initialize
     @games = []
     @authors = []
+    @books = []
+    @labels = []
+
     @choice_list = {
       '1' => 'List all books.',
       '2' => 'List all labels (e.g. Gift, New)',
       '3' => 'Add a book',
-      '4' => 'List all music albums',
+      '4' => 'Add a label',
       '5' => 'List all genres (e.g Comedy, Thriller)',
       '6' => 'Add a music album',
       '7' => 'Add a game.',
@@ -28,10 +31,12 @@ class App
   def run
     parse_game_data
     parse_author_data
+    parse_book_data
+    parse_label_data
     loop do
       puts '\nPlease choose your option by entering a number 😊 :'
       puts '\n'
-      @choice_list.each do |_key, _value|
+      @choice_list.each do |key, value|
         puts "#{key} - #{value}"
       end
       print '\nYour option ==> '
@@ -43,16 +48,17 @@ class App
     exit
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
   def handle_option(option)
     case option
-    # when '1'
-    #   puts 'Loading ...'
-    # when '2'
-    #   puts 'Loading ...'
-    # when '3'
-    #   puts 'Loading ...'
-    # when '4'
-    #   puts 'Loading ...'
+    when '1'
+      list_books
+    when '2'
+      list_label
+    when '3'
+      add_book
+    when '4'
+      add_label
     # when '5'
     #   puts 'Loading ...'
     # when '6'
@@ -63,14 +69,20 @@ class App
       list_games
     when '9'
       list_author
+      # when '10'
+      # add_label
     else
       puts 'Invalid option ❌ please choose again'
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 
   def exit
     save_game_data
     save_author_data
+    save_book_data
+    save_label_data
+
     puts '\n Your data is saved'
   end
 end

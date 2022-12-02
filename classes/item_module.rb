@@ -1,8 +1,53 @@
 require_relative './game'
+require_relative './book'
+require_relative './label'
+
 require 'date'
+
 module ItemModule
+  attr_accessor :books, :labels
+
   def initialize
     @item_option = '0'
+  end
+
+  def add_book
+    puts 'Publisher:'
+    publisher = gets.chomp
+    puts 'Please enter cover state of the book:'
+    cover_state = gets.chomp
+    puts 'Please enter the publish date (yyyy-mm-dd) of the book:'
+    publish_date = gets.chomp
+    book = Book.new(publisher, cover_state, publish_date)
+    @books << book
+    add_label
+    puts 'Book added successfully!'
+  end
+
+  def list_books
+    puts 'Books:'
+    @books.each do |book|
+      puts "Publisher: #{book.publisher}"
+      puts "Cover state: #{book.cover_state}"
+      puts "Publish date: #{book.publish_date}"
+      puts '----------------'
+    end
+  end
+
+  def add_label
+    puts 'Please enter the label Title of the book:'
+    title = gets.chomp
+    puts 'Please enter the color of the label:'
+    color = gets.chomp
+    @labels << Label.new(title, color)
+    # puts 'Label added successfully!'
+  end
+
+  def list_label
+    @labels.each do |label|
+      puts "Title: #{label.title} - Color: #{label.color}"
+      puts '-----------------'
+    end
   end
 
   def validate_date(date)
