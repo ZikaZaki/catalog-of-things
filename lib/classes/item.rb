@@ -35,8 +35,7 @@ class Item
   end
 
   def can_be_archived?
-    archived_date = Date.iso8601(@publish_date).next_year(10)
-    Date.today > archived_date
+    Date.today.year - @publish_date.year >= 10
   end
 
   def to_json(*args)

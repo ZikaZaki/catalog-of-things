@@ -26,4 +26,14 @@ RSpec.describe Game do
     can_be_archived = @game[0].send(:can_be_archived?)
     expect(can_be_archived).to be true
   end
+
+  it 'check if the game can be archieved' do
+    game = Game.new(publish_date: '2020-01-01', multiplayer: true, last_played_at: '2011-10-02')
+    expect(game.can_be_archived?).to eq(true)
+  end
+
+  it 'check if the game can be archieved' do
+    game = Game.new(publish_date: '2020-01-01', multiplayer: true, last_played_at: '2022-01-02')
+    expect(game.can_be_archived?).to eq(false)
+  end
 end
