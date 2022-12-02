@@ -4,9 +4,9 @@ require './lib/classes/game'
 RSpec.describe Game do
   before :each do
     @game = [
-      Game.new( publish_date:'2020-10-21', multiplayer: true, last_played_at: '2009-10-02'),
-      Game.new( publish_date:'2021-10-21', multiplayer: false, last_played_at: '2010-10-02'),
-      Game.new( publish_date:'2022-10-21', multiplayer: true, last_played_at: '2011-10-02'),
+      Game.new(publish_date: '2020-10-21', multiplayer: true, last_played_at: '2009-10-02'),
+      Game.new(publish_date: '2021-10-21', multiplayer: false, last_played_at: '2010-10-02'),
+      Game.new(publish_date: '2022-10-21', multiplayer: true, last_played_at: '2011-10-02')
     ]
   end
 
