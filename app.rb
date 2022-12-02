@@ -48,15 +48,16 @@ class App
     exit
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
   def handle_option(option)
     case option
-     when '1'
-       list_books
+    when '1'
+      list_books
     when '2'
       list_label
     when '3'
       add_book
-     when '4'
+    when '4'
       add_label
     # when '5'
     #   puts 'Loading ...'
@@ -68,12 +69,13 @@ class App
       list_games
     when '9'
       list_author
-    #when '10'
-      #add_label
+      # when '10'
+      # add_label
     else
       puts 'Invalid option ❌ please choose again'
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 
   def exit
     save_game_data

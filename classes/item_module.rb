@@ -5,8 +5,8 @@ require_relative './label'
 require 'date'
 
 module ItemModule
-
   attr_accessor :books, :labels
+
   def initialize
     @item_option = '0'
   end
@@ -20,9 +20,8 @@ module ItemModule
     publish_date = gets.chomp
     book = Book.new(publisher, cover_state, publish_date)
     @books << book
-    add_label 
+    add_label
     puts 'Book added successfully!'
-
   end
 
   def list_books
@@ -35,13 +34,13 @@ module ItemModule
     end
   end
 
-  def add_label 
+  def add_label
     puts 'Please enter the label Title of the book:'
     title = gets.chomp
     puts 'Please enter the color of the label:'
     color = gets.chomp
     @labels << Label.new(title, color)
-    #puts 'Label added successfully!'
+    # puts 'Label added successfully!'
   end
 
   def list_label

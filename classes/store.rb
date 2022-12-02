@@ -4,11 +4,11 @@ require_relative 'book'
 require_relative 'label'
 
 module Store
-
-  def save_book_data 
+  def save_book_data
     @books_collection = []
     @books.each do |book|
-      @books_collection.push('publisher' => book.publisher, 'cover_state' => book.cover_state, 'publish_date' => book.publish_date)
+      @books_collection.push('publisher' => book.publisher, 'cover_state' => book.cover_state,
+                             'publish_date' => book.publish_date)
     end
     File.write('books.json', JSON.pretty_generate(@books_collection))
   end
@@ -21,19 +21,19 @@ module Store
   end
 
   def save_label_data
-  @labels_collection = []
-  @labels.each do |label|
-    @labels_collection.push('title' => label.title, 'color' => label.color)
+    @labels_collection = []
+    @labels.each do |label|
+      @labels_collection.push('title' => label.title, 'color' => label.color)
+    end
+    File.write('labels.json', JSON.pretty_generate(@labels_collection))
   end
-  File.write('labels.json', JSON.pretty_generate(@labels_collection))
-end
 
-def parse_label_data
-  File.write('labels.json', JSON.pretty_generate([])) unless File.exist?('labels.json')
-  JSON.parse(File.read('labels.json')).map do |label|
-    @labels << Label.new(label['title'], label['color'])
+  def parse_label_data
+    File.write('labels.json', JSON.pretty_generate([])) unless File.exist?('labels.json')
+    JSON.parse(File.read('labels.json')).map do |label|
+      @labels << Label.new(label['title'], label['color'])
+    end
   end
-end
 
   def save_game_data
     @games_collection = []
